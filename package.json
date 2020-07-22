@@ -1,0 +1,15 @@
+{
+	"name": "prescience.puppeteer-botcheck",
+	"version": "1.0.0",
+	"description": "",
+	"private": true,
+	"keywords": [],
+	"author": "Prescience",
+	"license": "ISC",
+	"dependencies": {
+		"lodash": "^4.17.15",
+		"puppeteer": "2.1.1",
+		"puppeteer-extra": "^3.1.9",
+		"puppeteer-extra-plugin-stealth": "^2.4.7"
+	}
+}
