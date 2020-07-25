@@ -40,6 +40,43 @@ class Botcheck {
 	 * Methods for running tests
 	 *
 	 */
+	
+	
+	async isolatedWorld() {
+		return new Promise(async (resolve, reject) => {
+			try {
+
+				await this.goto('https://prescience-data.github.io/execution-monitor.html', 200);
+
+				// Test abstracted getElementById
+				await this.page.$('#result');
+
+				// Add any other tests you need here...
+
+				await this.page.evaluate(() => {
+					// Test createElement execution
+					let newDiv = document.createElement('div');
+					let newContent = document.createTextNode('Creating an element on the page.');
+					newDiv.appendChild(newContent);
+					// Test getElementById execution
+					let currentDiv = document.getElementById('div1');
+					document.body.insertBefore(newDiv, currentDiv);
+				});
+
+				await this.page.delay(2000);
+
+				const element = await this.page.$('#result');
+				let output = await (await element.getProperty('textContent')).jsonValue();
+
+				console.log('IsolatedWorld', output);
+
+				resolve(output);
+
+			} catch (err) {
+				reject(err);
+			}
+		});
+	}
 
 	async sannysoft() {
 		return new Promise(async (resolve, reject) => {
