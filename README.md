@@ -13,6 +13,7 @@ The scores or outcome will be shown in the console.
 * FingerprintJS2 - https://fingerprintjs.com/demo
 * Datadome - https://datadome.co
 * Executution Monitor https://prescience-data.github.io/execution-monitor.html
+* F5 Network
 
 
 ### Usage
