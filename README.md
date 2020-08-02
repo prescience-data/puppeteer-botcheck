@@ -13,8 +13,9 @@ The scores or outcome will be shown in the console.
 * FingerprintJS2 - https://fingerprintjs.com/demo
 * Datadome - https://datadome.co
 * Executution Monitor https://prescience-data.github.io/execution-monitor.html
-* F5 Network
-
+* F5 Network https://ib.bri.co.id/ib-bri
+* Whiteops https://www.whiteops.com (Need better test case if available)
+* PixelScan https://pixelscan.net
 
 ### Usage
 
