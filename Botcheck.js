@@ -23,7 +23,7 @@ class Botcheck {
 				if (url) {
 					delay = delay ? parseInt(delay) : 2000;
 					await this.page.goto(url, { waitUntil: 'networkidle2' });
-					await this.page.delay(delay);
+					await this.page.waitFor(delay);
 					resolve();
 				}
 				else {
@@ -40,8 +40,8 @@ class Botcheck {
 	 * Methods for running tests
 	 *
 	 */
-	
-	
+
+
 	async isolatedWorld() {
 		return new Promise(async (resolve, reject) => {
 			try {
@@ -63,7 +63,7 @@ class Botcheck {
 					document.body.insertBefore(newDiv, currentDiv);
 				});
 
-				await this.page.delay(2000);
+				await this.page.waitFor(2000);
 
 				const element = await this.page.$('#result');
 				let output = await (await element.getProperty('textContent')).jsonValue();
@@ -207,7 +207,7 @@ class Botcheck {
 				if (button) {
 					await button.click({ delay: 10 });
 					await this.page.waitForNavigation({ waitUntil: 'networkidle2' });
-					await this.page.delay(200, 500);
+					await this.page.waitFor(300);
 				}
 				else {
 					console.log('Could not find the button!');
