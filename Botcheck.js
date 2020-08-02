@@ -78,6 +78,38 @@ class Botcheck {
 		});
 	}
 
+	async behaviorMonitor() {
+		return new Promise(async (resolve, reject) => {
+			try {
+
+				await this.goto('https://prescience-data.github.io/behavior-monitor.html', 200);
+
+				// Hover and click an element
+				const resultElement = await this.page.$('#result');
+
+				await resultElement.hover();
+				await resultElement.click({ delay: 10 });
+
+				await this.page.waitFor(200);
+
+				// Type string
+				await this.page.keyboard.type('Hello world...', { delay: 3 });
+
+				await this.page.waitFor(1000);
+
+				const element = await this.page.$('#result');
+				let output = await (await element.getProperty('textContent')).jsonValue();
+
+				console.log('BehaviorMonitor', output);
+
+				resolve(output);
+
+			} catch (err) {
+				reject(err);
+			}
+		});
+	}
+
 	async f5network() {
 		return new Promise(async (resolve, reject) => {
 			try {
