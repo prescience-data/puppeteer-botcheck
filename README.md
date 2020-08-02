@@ -15,7 +15,7 @@ The scores or outcome will be shown in the console.
 * Executution Monitor https://prescience-data.github.io/execution-monitor.html
 
 
-### Useage
+### Usage
 
 * Run `npm install` to pull down `puppeteer`
 * Add your desired tests to `test.js` and configure your client
