@@ -78,6 +78,42 @@ class Botcheck {
 		});
 	}
 
+	async f5network() {
+		return new Promise(async (resolve, reject) => {
+			try {
+
+				await this.goto('https://ib.bri.co.id/ib-bri', 2000);
+
+				const element = await this.page.$('form#loginForm');
+				let output = element ? 'Passed' : 'Failed';
+
+				console.log('F5 Network', output);
+				resolve(output);
+
+			} catch (err) {
+				reject(err);
+			}
+		});
+	}
+
+	async pixelscan() {
+		return new Promise(async (resolve, reject) => {
+			try {
+
+				await this.goto('https://pixelscan.net', 3000);
+
+				const element = await this.page.$('span.consistency-status-text');
+				let output = await (await element.getProperty('textContent')).jsonValue();
+
+				console.log('PixelScan', 'Browser Fingerprint: ' + output);
+				resolve(output);
+
+			} catch (err) {
+				reject(err);
+			}
+		});
+	}
+
 	async sannysoft() {
 		return new Promise(async (resolve, reject) => {
 			try {
@@ -207,7 +243,7 @@ class Botcheck {
 				if (button) {
 					await button.click({ delay: 10 });
 					await this.page.waitForNavigation({ waitUntil: 'networkidle2' });
-					await this.page.waitFor(300);
+					await this.page.waitFor(500);
 				}
 				else {
 					console.log('Could not find the button!');
@@ -217,6 +253,35 @@ class Botcheck {
 				let output = captcha ? 'Failed' : 'Passed';
 
 				console.log('Datadome', output);
+				resolve(output);
+
+			} catch (err) {
+				reject(err);
+			}
+		});
+	}
+
+	async whiteops() {
+		return new Promise(async (resolve, reject) => {
+			try {
+
+				await this.goto('https://www.whiteops.com', 3000);
+
+				const button = await this.page.$('a[href="https://www.whiteops.com/company/about"]');
+
+				if (button) {
+					await button.click({ delay: 8 });
+					await this.page.waitForNavigation({ waitUntil: 'networkidle2' });
+					await this.page.waitFor(500);
+				}
+				else {
+					console.log('Could not find the button!');
+				}
+
+				let test = await this.page.$('a[href="https://resources.whiteops.com/data-sheets/white-ops-company-overview"]');
+				let output = test ? 'Passed' : 'Failed';
+
+				console.log('Whiteops', output);
 				resolve(output);
 
 			} catch (err) {
