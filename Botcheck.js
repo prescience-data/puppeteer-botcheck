@@ -98,9 +98,9 @@ class Botcheck {
 				await inputElement.click();
 				await inputElement.type('Hello world...', { delay: 3 });
 
-				await this.page._client.send(`Input.synthesizeScrollGesture({ x: 0, y: 0, xDistance: 0, yDistance: -100 });`);
+				await this.page._client.send('Input.synthesizeScrollGesture', { x: 0, y: 0, xDistance: 0, yDistance: -100 });
 
-				await this.page.waitFor(1000);
+				await this.page.waitFor(2500);
 
 				const element = await this.page.$('#result');
 				let output = await (await element.getProperty('textContent')).jsonValue();
