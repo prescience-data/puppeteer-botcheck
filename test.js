@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
 const Botcheck = require('./Botcheck');
+const argv = require('yargs').argv;
 
 const options = {
 	headless: false,
@@ -16,14 +17,27 @@ const options = {
 };
 
 (async () => {
-	const browser = await puppeteer.launch(options);
-	const page = await browser.newPage();
 
-	const botcheck = new Botcheck(page);
+	const testName = argv.run;
 
-	await botcheck.isolatedWorld();
+	if (testName) {
+		const browser = await puppeteer.launch(options);
+		const page = await browser.newPage();
 
-	// Add the tests you wish to run here...
+		const botcheck = new Botcheck(page);
+
+		if (botcheck && typeof botcheck[testName] == 'function') {
+			console.log('Running test: ' + testName);
+			await botcheck[testName]();
+		}
+		else {
+			console.log('Test not found.');
+		}
+	}
+	else {
+		console.log('No test defined.');
+
+	}
 
 })();
 
