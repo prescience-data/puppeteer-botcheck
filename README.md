@@ -20,6 +20,5 @@ The scores or outcome will be shown in the console.
 
 ### Usage
 
-* Run `npm install` to pull down `puppeteer`
-* Add your desired tests to `test.js` and configure your client
-* Run `node test` 
+* Run `npm install` to pull down `puppeteer` and other dependencies
+* Run `node test --run={testName}`
