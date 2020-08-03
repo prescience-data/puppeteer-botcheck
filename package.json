@@ -2,7 +2,6 @@
   "name": "prescience-botcheck",
   "version": "1.0.0",
   "description": "Bot detection tests for Puppeteer",
-  "private": true,
   "keywords": [],
   "author": "prescience-data",
   "license": "MIT",
