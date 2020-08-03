@@ -4,10 +4,11 @@
   "description": "Bot detection tests for Puppeteer",
   "private": true,
   "keywords": [],
-  "author": "Prescience",
-  "license": "ISC",
+  "author": "prescience-data",
+  "license": "MIT",
   "dependencies": {
-    "puppeteer": "^5.2.1"
+    "puppeteer": "^5.2.1",
+    "yargs": "^15.4.1"
   },
   "devDependencies": {}
 }
