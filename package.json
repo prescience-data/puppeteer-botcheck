@@ -1,8 +1,8 @@
 {
-  "name": "prescience-botcheck",
+  "name": "puppeteer-botcheck",
   "version": "1.0.0",
   "description": "Bot detection tests for Puppeteer",
-  "keywords": [],
+  "keywords": ["puppeteer", "puppeteer-extra", "scraping"],
   "author": "prescience-data",
   "license": "MIT",
   "dependencies": {
