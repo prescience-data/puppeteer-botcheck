@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+	"target":                       "es6",
+	"module":                       "commonjs",
+	"moduleResolution":             "node",
+	"esModuleInterop":              true,
+	"noImplicitAny":                true,
+	"noImplicitReturns":            true,
+	"allowJs":                      false,
+	"noFallthroughCasesInSwitch":   true,
+	"sourceMap":                    true,
+	"allowSyntheticDefaultImports": true,
+	"outDir":                       "dist",
+	"baseUrl":                      "src",
+	"resolveJsonModule":            true,
+	"strict":                       true
+  },
+  "include":         [
+	"src/**/*"
+  ],
+  "exclude":         [
+	"node_modules",
+	"node_modules/**/*",
+	"dist",
+	"src/**/*.spec.tsx",
+	"src/**/*.spec.ts"
+  ]
+}
