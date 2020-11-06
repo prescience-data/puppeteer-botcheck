@@ -80,7 +80,7 @@ export class BotCheck implements Types.BotCheck {
    */
   public async isolatedWorld(): Promise<string> {
     await this.page.goto(
-      "https://prescience-data.github.io/execution-monitor",
+      "https://prescience-data.github.io/execution-monitor.html",
       { waitUntil: "networkidle2" }
     )
     // Test abstracted getElementById

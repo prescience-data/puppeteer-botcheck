@@ -11,8 +11,8 @@ The scores or outcome will be shown in the console.
 * AreYouHeadless `npm test -- --tag=areyouheadless` https://arh.antoinevastel.com/bots/areyouheadless/
 * FingerprintJS2 `npm test -- --tag=fingerprintjs` https://fingerprintjs.com/demo/
 * Datadome `npm test -- --tag=datadome` https://datadome.co/
-* Execution Monitor `npm test -- --tag=execution` https://prescience-data.github.io/execution-monitor/
-* Behavior Monitor `npm test -- --tag=behaviour` https://prescience-data.github.io/behavior-monitor/
+* Execution Monitor `npm test -- --tag=execution` https://prescience-data.github.io/execution-monitor.html
+* Behavior Monitor `npm test -- --tag=behaviour` https://prescience-data.github.io/behavior-monitor.html
 * F5 Network `npm test -- --tag=f5` https://ib.bri.co.id/ib-bri/
 * WhiteOps `npm test -- --tag=whiteops` https://www.whiteops.com/ *(Need better test case if available)*
 * PixelScan `npm test -- --tag=pixelscan` https://pixelscan.net/
