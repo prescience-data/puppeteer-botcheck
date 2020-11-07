@@ -1,12 +1,12 @@
-# A collection of bot detection tests for Puppeteer Extra
+# 🕵‍♂ A collection of bot detection tests for Puppeteer Extra
 
 This class accepts a `Puppeteer` page instance and allows the user to run a series of tests against known bot detection tools and products.
 
 The scores or outcome will be shown in the console.
 
-[TheDanceContinues](https://media.giphy.com/media/l0HlGlpFpV9LjXDK8/giphy.gif)
+<img src="https://media.giphy.com/media/l0HlGlpFpV9LjXDK8/giphy.gif" height="300" alt="DanceContinues" />
 
-### Available tests
+### 🧰 Available Tests
 
 - SannySoft 
   - `npm test -- --tag=sannysoft` 
@@ -39,7 +39,7 @@ The scores or outcome will be shown in the console.
   - `npm test -- --tag=pixelscan` 
   - https://pixelscan.net/
 
-### Usage
+### 🛠 Usage
 
 1. Run `npm install` to pull down `puppeteer`, `puppeteer-extra`, `typescript`,  and other dependencies.
 2. Edit `test.ts` to adjust your configuration if required.
