@@ -4,18 +4,40 @@ This class accepts a `Puppeteer` page instance and allows the user to run a seri
 
 The scores or outcome will be shown in the console.
 
+[TheDanceContinues](https://media.giphy.com/media/l0HlGlpFpV9LjXDK8/giphy.gif)
+
 ### Available tests
 
-* SannySoft `npm test -- --tag=sannysoft` https://bot.sannysoft.com/
-* Recaptcha Score `npm test -- --tag=recaptcha` https://antcpt.com/eng/information/demo-form/recaptcha-3-test-score.html 
-* AreYouHeadless `npm test -- --tag=areyouheadless` https://arh.antoinevastel.com/bots/areyouheadless/
-* FingerprintJS2 `npm test -- --tag=fingerprintjs` https://fingerprintjs.com/demo/
-* Datadome `npm test -- --tag=datadome` https://datadome.co/
-* Execution Monitor `npm test -- --tag=execution` https://prescience-data.github.io/execution-monitor.html
-* Behavior Monitor `npm test -- --tag=behaviour` https://prescience-data.github.io/behavior-monitor.html
-* F5 Network `npm test -- --tag=f5` https://ib.bri.co.id/ib-bri/
-* WhiteOps `npm test -- --tag=whiteops` https://www.whiteops.com/ *(Need better test case if available)*
-* PixelScan `npm test -- --tag=pixelscan` https://pixelscan.net/
+- SannySoft 
+  - `npm test -- --tag=sannysoft` 
+  - https://bot.sannysoft.com/
+- Recaptcha Score 
+  - `npm test -- --tag=recaptcha` 
+  - https://antcpt.com/eng/information/demo-form/recaptcha-3-test-score.html 
+- AreYouHeadless 
+  - `npm test -- --tag=areyouheadless` 
+  - https://arh.antoinevastel.com/bots/areyouheadless/
+- FingerprintJS2 
+  - `npm test -- --tag=fingerprintjs` 
+  - https://fingerprintjs.com/demo/
+- Datadome 
+  - `npm test -- --tag=datadome` 
+  - https://datadome.co/
+- Execution Monitor 
+  - `npm test -- --tag=execution` 
+  - https://prescience-data.github.io/execution-monitor.html
+- Behavior Monitor 
+  - `npm test -- --tag=behaviour` 
+  - https://prescience-data.github.io/behavior-monitor.html
+- F5 Network 
+  - `npm test -- --tag=f5` 
+  - https://ib.bri.co.id/ib-bri/
+- WhiteOps 
+  - `npm test -- --tag=whiteops` 
+  - https://www.whiteops.com/ _(Need better test case if available)_
+- PixelScan 
+  - `npm test -- --tag=pixelscan` 
+  - https://pixelscan.net/
 
 ### Usage
 
