@@ -1,5 +1,9 @@
 # 🕵‍♂ A collection of bot detection tests for Puppeteer Extra
 
+
+> ### Note: A cleaner version of these tests will be getting migrated to Foundation: https://github.com/prescience-data/foundation
+> I still intend to keep these updated but will likely get less attention than the `Foundation` package.
+
 This class accepts a `Puppeteer` page instance and allows the user to run a series of tests against known bot detection tools and products.
 
 The scores or outcome will be shown in the console.
